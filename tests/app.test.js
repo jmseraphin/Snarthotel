@@ -80,6 +80,19 @@ describe("POST /api/book-room", () => {
     expect(res.body.total).toBe(260);
   });
 
+test("vue mer ajoute 30 par nuit", async () => {
+    const res = await request(app).post("/api/book-room").send({
+      pricePerNight: 100,
+      nights: 2,
+      season: "Basse",
+      hasWeekend: false,
+      seaView: true,
+      clientType: "VIP1",
+      persons: 1,
+    });
+    expect(res.body.total).toBe(260);
+  });
+
   test("client non-VIP paie le petit-déjeuner (15 par personne par nuit)", async () => {
     const res = await request(app).post("/api/book-room").send({
       pricePerNight: 100,
@@ -101,6 +114,32 @@ describe("POST /api/book-room", () => {
       hasWeekend: true,
       seaView: true,
       clientType: "Normal",
+      persons: 2,
+    });
+    expect(res.body.total).toBeGreaterThan(0);
+  });
+
+  test("combinaison de plusieurs modificateurs", async () => {
+    const res = await request(app).post("/api/book-room").send({
+      pricePerNight: 100,
+      nights: 5,
+      season: "Haute",
+      hasWeekend: true,
+      seaView: true,
+      clientType: "Normaleee",
+      persons: 2,
+    });
+    expect(res.body.total).toBeGreaterThan(0);
+  });
+
+  test("combinaison de plusieurs modificateurs", async () => {
+    const res = await request(app).post("/api/book-room").send({
+      pricePerNight: 100,
+      nights: 5,
+      season: "Haute",
+      hasWeekend: true,
+      seaView: true,
+      clientType: "Normaleee",
       persons: 2,
     });
     expect(res.body.total).toBeGreaterThan(0);
