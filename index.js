@@ -4,20 +4,6 @@ const app = express();
 
 app.use(express.json());
 
-/**
- * Calculates the total price for a room booking.
- * Applies multipliers and surcharges based on booking conditions.
- *
- * @param {Object} data - Booking details
- * @param {number} data.pricePerNight - Base price per night
- * @param {number} data.nights - Number of nights
- * @param {string} data.season - "Haute" or "Basse"
- * @param {boolean} data.hasWeekend - Whether the stay includes a weekend
- * @param {boolean} data.seaView - Whether the room has a sea view
- * @param {string} data.clientType - "VIP" or "Normal"
- * @param {number} data.persons - Number of persons
- * @returns {number} Total price
- */
 function calculateTotal(data) {
   let total = data.pricePerNight * data.nights;
 
