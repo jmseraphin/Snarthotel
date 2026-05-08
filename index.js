@@ -12,7 +12,7 @@ function calculateTotal(data) {
   }
 
   if (data.hasWeekend) {
-    total *= 1.2;
+    total *= 1.2
   }
 
   if (data.nights > 7) {

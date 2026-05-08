@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1778225776388" clover="3.2.0">
-  <project timestamp="1778225776388" name="All files">
+<coverage generated="1778226661693" clover="3.2.0">
+  <project timestamp="1778226661693" name="All files">
     <metrics statements="22" coveredstatements="22" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2" elements="38" coveredelements="38" complexity="0" loc="22" ncloc="22" packages="1" files="1" classes="1"/>
     <file name="index.js" path="D:\POJET\Smart_Hotel_Qualimetrie\index.js">
       <metrics statements="22" coveredstatements="22" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
@@ -17,7 +17,7 @@
       <line num="22" count="9" type="cond" truecount="2" falsecount="0"/>
       <line num="23" count="3" type="stmt"/>
       <line num="26" count="9" type="cond" truecount="2" falsecount="0"/>
-      <line num="27" count="3" type="stmt"/>
+      <line num="27" count="4" type="stmt"/>
       <line num="30" count="9" type="stmt"/>
       <line num="37" count="1" type="stmt"/>
       <line num="38" count="10" type="stmt"/>
